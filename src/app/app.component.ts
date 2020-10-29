@@ -1,37 +1,37 @@
 import { Component } from '@angular/core';
-import { QuestionsService } from './questions.service';
-import { Quiz, Answers, Choice } from './quiz.model';
+//import { QuestionsService } from './questions.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<router-outlet></router-outlet>'
 })
-export class AppComponent {
-  answers: Answers;
-  quiz: Quiz;
-  currentQuestionIndex: number;
-  private showResults = false;
-  // title = 'my-awesome-quiz-app';
+export class AppComponent { }
 
-  constructor(private questionsService: QuestionsService) {
-    this.questionsService.getJSON('maths').subscribe(data => {
-      this.quiz = new Quiz('maths', data);
-      this.answers = new Answers();
-      this.currentQuestionIndex = 0;
-    });
-  }
+// export class AppComponent {
+//   answers: Answers;
+//   quiz: Quiz;
+//   currentQuestionIndex: number;
+//   private showResults = false;
+//   // title = 'my-awesome-quiz-app';
 
-  updateChoice(choice: Choice) {
-    this.answers.values[this.currentQuestionIndex] = choice;
-  }
+//   constructor(private questionsService: QuestionsService) {
+//     this.questionsService.getJSON('maths').subscribe(data => {
+//       this.quiz = new Quiz('maths', data);
+//       this.answers = new Answers();
+//       this.currentQuestionIndex = 0;
+//     });
+//   }
 
-  nextOrViewResults() {
-    if (this.currentQuestionIndex === this.quiz.questions.length - 1) {
-      this.showResults = true;
-      return;
-    }
+//   updateChoice(choice: Choice) {
+//     this.answers.values[this.currentQuestionIndex] = choice;
+//   }
 
-    this.currentQuestionIndex++;
-  }
-}
+//   nextOrViewResults() {
+//     if (this.currentQuestionIndex === this.quiz.questions.length - 1) {
+//       this.showResults = true;
+//       return;
+//     }
+
+//     this.currentQuestionIndex++;
+//   }
+// }
