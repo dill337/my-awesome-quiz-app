@@ -32,11 +32,11 @@
         "correct": true
       },
       {
-        "value": "Bonjour",
+        "value": "8",
         "correct": false
       },
       {
-        "value": "pi",
+        "value": "10",
         "correct": false
       }
     ]

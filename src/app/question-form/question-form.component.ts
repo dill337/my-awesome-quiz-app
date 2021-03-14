@@ -16,7 +16,7 @@ export class QuestionFormComponent implements OnInit {
 
   //constructor() { }
 
-  ngOnInit()/*: void*/ {
+  ngOnInit() {
     this.form = new FormGroup({
       choice: new FormControl()
     });
