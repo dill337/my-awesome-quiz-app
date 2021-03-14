@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     WelcomeComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
